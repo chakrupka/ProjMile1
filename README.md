@@ -1,6 +1,6 @@
-# COSC61 Project 1
+# COSC61 Project 1 #
 Analyzing NBA player statistics and salaries.
-### players.csv
+### players.csv ###
 This file includes general information and career statistics for every NBA player (all time), including:
 - Name and Unique Player ID
 - Birthdate and Birthplace
@@ -19,7 +19,7 @@ This file includes general information and career statistics for every NBA playe
 - Games Played
 - Player Efficiency Rating
 - Win Shares
-### salaries_1985to2018.csv
+### salaries_1985to2018.csv ###
 This includes the salaries for each player, each season, for all players in the NBA from 1985 to 2018. Includes:
 - League (Only covers the NBA)
 - Unique Player ID
