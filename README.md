@@ -21,7 +21,6 @@ This file includes general information and career statistics for every NBA playe
 - Win Shares
 ### salaries_1985to2018.csv ###
 This includes the salaries for each player, each season, for all players in the NBA from 1985 to 2018. Includes:
-- League (Only covers the NBA)
 - Unique Player ID
 - Team
 - Season, Season Start and Season End
