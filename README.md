@@ -1,4 +1,4 @@
-# COSC61 Project 1 #
+# COSC61 Term Project: NBA Player Database #
 Analyzing NBA player statistics and salaries, a student project by Cha Krupka for COSC61 at Dartmouth College.
 ## Installation Instructions ##
 _Warning: these steps are for **Mac** users specifically. They **may need to be modified** based on the system you use._  
