@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2 style="padding-top: 10px;">{%block title%}Current NBA Teams{%endblock%}</h2>
+{% for info in teams %}
+<p style="margin: 1px;"><a href="{{ url_for('teaminfo', teamid = info[0]) }}" style="width: 10px;">{{info[1]}}</a></p>
+{% endfor %}
+<br>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block content %}
+<h2 style="padding-top: 20px;">{%block title%}Player Search{%endblock%}</h2>
+<form action="/playersearch/" method="post">
+    <input type="text" name="player_name" size="30"
+    placeholder="Enter a name""></input>
+    <input type="submit"
+    value="Search">
+</form>
+{% if players!="" %}
+<h5 style="margin-top: 10px; margin-bottom: 5px;">Player, Draft year</h5>
+{%endif%}
+{% for player in players %}
+    <a href="{{ url_for('pinfo', id = player[2]) }}">{{ player[0] }}, {{ player[1] }}</a>
+    <br>
+{% endfor %}
+{% endblock%}

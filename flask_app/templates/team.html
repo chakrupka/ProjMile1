@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>{%block title%}{{team[0]}}{%endblock%}</h2>
+<h5 style="margin-bottom: -2px;">2017-18 Payroll</h5>
+<table class="table" style="max-width:425px;">
+    <tr>
+        <th>Player</th>
+        <th style="text-align: right;">Salary</th>
+    </tr>
+    {% for player in payroll %}
+        <tr>
+            <td><a href="{{ url_for('pinfo', id = player[0]) }}">{{player[1]}}</a></td>
+            <td style="text-align: right;">{{player[3]}}</td>
+        </tr>
+    {% endfor %}
+    <tr>
+        <td>TOTAL</td>
+        <td style="text-align: right;">{{ptotal[0]}}</td>
+    </tr>
+</table>
+<br>
+{% endblock %}

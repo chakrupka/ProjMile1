@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{%block title%}Salary Info{%endblock%}
+{% block content %}
+<h4 style="margin-top: 20px;">Salary Data Analysis (Samples)</h4>
+<details style="padding: 20px;">
+    <summary style="font-size: larger;">Cumulative and Average Career Earnings by Location of Birth</summary>
+    <table class="table" style="max-width:600px;">
+        <tr>
+            <th>Location</th>
+            <th style="text-align: right;">Cumulative Earnings</th>
+            <th style="text-align: right;">Number of Players</th>
+            <th style="text-align: right;">Average per Player</th>
+        </tr>
+        {% for info in locsalaries %}
+            <tr>
+                <td>{{info[0]}}</td>
+                <td style="text-align: right;">{{info[2]}}</td>
+                <td style="text-align: right;">{{info[3]}}</td>
+                <td style="text-align: right;">{{info[4]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</details>
+<details style="padding: 20px;">
+    <summary style="font-size: larger;">Cumulative and Average Career Earnings by College (Top 50)</summary>
+    <table class="table" style="max-width:600px;">
+        <tr>
+            <th>College</th>
+            <th style="text-align: right;">Cumulative Earnings</th>
+            <th style="text-align: right;">Number of Players</th>
+            <th style="text-align: right;">Average per Player</th>
+        </tr>
+        {% for info in collegesals %}
+            <tr>
+                <td>{{info[0]}}</td>
+                <td style="text-align: right;">{{info[2]}}</td>
+                <td style="text-align: right;">{{info[3]}}</td>
+                <td style="text-align: right;">{{info[4]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</details>
+<details style="padding: 20px;">
+    <summary style="font-size: larger;">Average Salary Since 1985 (& YoY Change)</summary>
+    <table class="table" style="max-width:300px;">
+        <tr>
+            <th>Season</th>
+            <th style="text-align: center;">Avg. Salary </th>
+            <th style="text-align: center;">% Change YoY</th>
+        </tr>
+        {% for info in averages %}
+            <tr>
+                <td>{{info[0]}}</td>
+                <td style="text-align: right;">{{info[1]}}</td>
+                {% if info[2] is not none and info[2] > 0 %}
+                <td style="text-align: center; color: green;">{{info[2]}}</td>
+                {% elif info[2] is not none and info[2] < 0 %}
+                <td style="text-align: center; color: red;">{{info[2]}}</td>
+                {% else %}
+                <td style="text-align: center;">{{info[2]}}</td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+    </table>
+</details>
+<details style="padding: 20px;">
+    <summary style="font-size: larger;">Total Career Earnings (Top 50)</summary>
+    <table class="table" style="max-width:300px;">
+        <tr>
+            <th>Player</th>
+            <th style="text-align: center;">Career Earnings</th>
+        </tr>
+        {% for info in topttls %}
+            <tr>
+                <td>{{info[0]}}</td>
+                <td style="text-align: right;">{{info[1]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</details>
+<details style="padding: 20px;">
+    <summary style="font-size: larger;">Average Career Length By Height</summary>
+    <em style="font-size: small;">Information on this table can be found below</em>
+    <table class="table" style="max-width:300px;">
+        <tr>
+            <th style="text-align: center;"> Height</th>
+            <th style="text-align: center;">Career Length</th>
+        </tr>
+        {% for info in yrheight %}
+            <tr>
+                <td style="text-align: center;">{{info[0]}}</td>
+                <td style="text-align: center;">{{info[1]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+    <span>Only three players have ever been shorter than 5'7":</span>
+    <li><a href="{{ url_for('pinfo', id=boguemu01)}}">Muggsy Bogues</a> (5'3")</li>
+    <li><a href="{{ url_for('pinfo', id=boykiea01)}}">Earl Boykins</a> (5'5")</li>
+    <li><a href="{{ url_for('pinfo', id=boguemu01)}}">Spud Webb</a> (5'6")</li>
+    <p style="width: 400px;">Each of these players carved a niche on the playing field, and found incredibly long career success for it. 
+        Perhaps it also has something to do with bearing less weight owing to a shorter frame.</p>
+</details>
+{% endblock %}

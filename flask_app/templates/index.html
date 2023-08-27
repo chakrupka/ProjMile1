@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{%block title%}Home{%endblock%}
+{% block content %}
+<div style="text-align: center;">
+    <h1 style="padding-top: 10px;">NBA Player Database</h1>
+    <h5>Created by Cha Krupka for COSC61</h5>
+    <h6>Data gathered from Basketball-Reference</h6>
+    <p style="margin: 5px;"><a href="{{ url_for('psearch') }}">Search for a specific player</a></p>
+    <p style="margin: 5px;"><a href="{{ url_for('nbasalaries') }}">Some interesting salary data</a></p>
+    <p style="margin: 5px;"><a href="{{ url_for('teams') }}">Check a team's payroll</a></p>
+    <p style="margin: 5px;"><a href="{{ url_for('about') }}">About this project</a></p>
+    <p style="margin: 5px;"><a href="https://github.com/chakrupka/Project61">GitHub Repository</a></p>
+
+</div>
+{% endblock %}
