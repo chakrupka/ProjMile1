@@ -17,7 +17,7 @@ _Warning: these steps are for Mac users specifically. They may need to be modifi
 13. `mysql -u root -p` or `mysql -u root`
 14. `SHOW DATABASES;`
 15. `USE nbaplayers`
-16. `SHOW TABLES`
+16. `SHOW TABLES;`
 17. `SELECT * FROM players;` (should return 2408 rows)
 18. `exit`
 19. Install necessary modules:
