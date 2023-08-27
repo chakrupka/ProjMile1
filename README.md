@@ -1,7 +1,8 @@
 # COSC61 Project 1 #
 Analyzing NBA player statistics and salaries, a student project by Cha Krupka for COSC61 at Dartmouth College
 ## Installation Instructions ##
-_Warning: these steps are for Mac users specifically. They may need to be modified based on the system you use_  
+_Warning: these steps are for **Mac** users specifically. They **may need to be modified** based on the system you use._  
+_Another note: if MySQL Workbench is installed, you can simply import the database using the provided dump file (importnbaplayers.sql) and MySQL Workbench import wizard into a localhost connection. Skip to #19 in this case._
 1. Download files (Green button [<> Code] --> Download ZIP)
 2. Open terminal
 3. Install homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
