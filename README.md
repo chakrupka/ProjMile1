@@ -1,5 +1,6 @@
 # COSC61 Term Project: NBA Player Database #
 Analyzing NBA player statistics and salaries, a student project by Cha Krupka for COSC61 at Dartmouth College.
+Locally-hosted web app allows searching for NBA players by name, checking team payrolls and rosters, and looking at sample data analysis. Data sourced from Basketball-Reference dataset, all code written by me.
 ## Installation Instructions ##
 _Warning: these steps are for **Mac** users specifically. They **may need to be modified** based on the system you use._  
 _Another note: if MySQL Workbench is installed, you can simply import the database using the provided dump file (importnbaplayers.sql) and MySQL Workbench import wizard into a localhost connection. Skip to #19 in this case._
